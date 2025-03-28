@@ -1,12 +1,12 @@
-// app/layout.tsx
+import { StatsigWrapper } from './lib/statsig';
 
-import MyStatsig from "./statsig";
-
-export default function RootLayout({ children}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MyStatsig>{children}</MyStatsig>
+        <StatsigWrapper>
+          {children}
+        </StatsigWrapper>
       </body>
     </html>
   );

@@ -1,10 +1,10 @@
-'use client';
-
-import { useStatsigClient } from "@statsig/react-bindings";
+import FeatureButton from './components/FeatureButton';
 
 export default function Home() {
-  const { client } = useStatsigClient();
-
-  return <button onClick={() => client.logEvent("my_custom_event")}> Click Me </button>;
-
+  return (
+    <main>
+      <h1>My App</h1>
+      <FeatureButton />
+    </main>
+  );
 }
